@@ -14,21 +14,18 @@
 
   <style>
     :root {
-      /* Updated Professional Colors */
-      --primary-color: #0f172a; /* Deep Slate Blue */
-      --accent-color: #2563eb; /* Vibrant Professional Blue */
+      --primary-color: #0f172a; 
+      --accent-color: #2563eb; 
       --text-color: #334155;
     }
 
     body {
       font-family: 'Inter', sans-serif;
-      /* Soft, colorful, professional gradient background */
       background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 50%, #e2e8f0 100%);
       color: var(--text-color);
       min-height: 100vh;
     }
 
-    /* Typography & Core Colors */
     h1, h2, h3, h4, h5, h6 { font-weight: 700; color: var(--primary-color); }
     .primary-text { color: var(--primary-color) !important; }
     .accent-text { color: var(--accent-color) !important; }
@@ -41,11 +38,9 @@
       font-weight: 800;
     }
 
-    /* Sidebar Navigation Overrides */
     nav { background-color: transparent; box-shadow: none; }
     .side-nav { background-color: #ffffff; box-shadow: 2px 0 15px rgba(0,0,0,0.08); }
     
-    /* Dedicated Logo Container Fix */
     .side-nav .logo-container {
       padding: 30px 15px 15px 15px;
       text-align: center;
@@ -66,7 +61,6 @@
       display: inline-block;
     }
 
-    /* Fallback text if image breaks */
     .fallback-name {
       font-size: 1.4rem;
       font-weight: 800;
@@ -79,7 +73,6 @@
     .side-nav li > a:hover { color: var(--accent-color); background-color: transparent; }
     .side-nav li > a > i { color: var(--primary-color); }
 
-    /* Modern Glass Cards */
     .glass-card {
       background: rgba(255, 255, 255, 0.85);
       backdrop-filter: blur(10px);
@@ -96,7 +89,6 @@
       box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
     }
 
-    /* Skill Chips */
     .skill-category { margin-bottom: 20px; }
     .skill-category h5 { font-size: 1.1rem; color: var(--primary-color); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;}
     .skill-chip {
@@ -120,7 +112,6 @@
       box-shadow: 0 4px 10px rgba(37,99,235,0.2);
     }
 
-    /* Buttons */
     .btn-custom {
       background: linear-gradient(90deg, #2563eb, #1d4ed8);
       color: white;
@@ -140,7 +131,6 @@
       color: white;
     }
 
-    /* Section Headings */
     .page-title {
       font-size: 2.5rem;
       font-weight: 800;
@@ -161,7 +151,6 @@
       border-radius: 3px;
     }
 
-    /* Intro Section */
     #intro { display: flex; align-items: center; }
     
     .social-icons a {
@@ -173,7 +162,6 @@
     }
     .social-icons a:hover { color: var(--accent-color); transform: translateY(-3px); }
 
-    /* Timeline style */
     .timeline-date { font-weight: 700; color: var(--accent-color); font-size: 0.95rem; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.5px;}
     .role-title { font-size: 1.4rem; font-weight: 700; margin: 0 0 5px 0; color: var(--primary-color); }
     .company-name { font-size: 1.1rem; font-weight: 600; color: #64748b; margin-bottom: 15px; }
@@ -194,7 +182,6 @@
   
   <nav class="hide-on-small-only">
     <ul class="side-nav fixed section">
-      
       <li class="logo-container">
         <a id="logo-container" href="#intro">
           <img src="/assets/img/passport.jpeg" class="circle profile-pic" alt="Arihant Ostwal" onerror="this.style.display='none'; document.getElementById('fallback-name').style.display='block';">
@@ -308,8 +295,8 @@
     <section id="projects" class="section scrollspy">
       <div class="container">
         <h3 class="page-title">Projects</h3>
+        
         <div class="row">
-          
           <div class="col s12 m6">
             <div class="glass-card" style="height: 100%;">
               <h4 class="role-title" style="font-size: 1.3rem;">FinRisk 360: Credit Risk & ETL Pipeline</h4>
@@ -333,8 +320,34 @@
               </ul>
             </div>
           </div>
-
         </div>
+        
+        <div class="row">
+          <div class="col s12 m6">
+            <div class="glass-card" style="height: 100%;">
+              <h4 class="role-title" style="font-size: 1.3rem;">Customer Segmentation</h4>
+              <div class="timeline-date" style="margin-bottom: 15px;">Python, Machine Learning, K-Means, Pandas, Matplotlib</div>
+              <ul class="bullet-list">
+                <li>Developed an unsupervised machine learning model using K-Means clustering to segment retail customers based on annual income and purchasing behavior.</li>
+                <li>Utilized the Elbow Method to determine the optimal number of clusters and visualized segments using Matplotlib to drive targeted marketing strategies.</li>
+                <li>Built and exported the trained predictive model using Scikit-Learn to facilitate easy deployment and resource allocation for business stakeholders.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col s12 m6">
+            <div class="glass-card" style="height: 100%;">
+              <h4 class="role-title" style="font-size: 1.3rem;">Employee Payroll System</h4>
+              <div class="timeline-date" style="margin-bottom: 15px;">Python, Flask, MongoDB, REST APIs</div>
+              <ul class="bullet-list">
+                <li>Designed and developed a full-stack Employee Payroll Management System to automate attendance-based salary calculations and streamline internal HR operations.</li>
+                <li>Engineered the backend logic using Python and the Flask framework, creating secure endpoints for full CRUD functionality.</li>
+                <li>Implemented MongoDB as the primary NoSQL database to efficiently manage, store, and retrieve dynamic employee records and attendance data.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
